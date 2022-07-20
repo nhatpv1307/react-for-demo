@@ -1,5 +1,5 @@
 pipeline {
-  agent { label 'linux-slave' }
+  agent { label 'Slave01' }
 
   options {
     skipDefaultCheckout()
@@ -10,7 +10,7 @@ pipeline {
     stage('Checkout source code') {
       steps {
         git branch: 'master',
-        url: 'https://github.com/HoangPhu98/react-for-demo.git'
+        url: 'https://github.com/nhatpv1307/react-for-demo.git'
         sh 'ls -la'
       }
     }
